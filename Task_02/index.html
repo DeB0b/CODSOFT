@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC</title>
+    <style>
+        *{
+            padding: 0;margin: 0;
+            box-sizing: border-box;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+        }
+        nav{
+           
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            align-items: center;
+            color: #000;
+
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+       
+        }
+        nav li a{
+            text-decoration: none;
+            color: #7fb636;
+            color: #303232ba;
+            font-size: 20px;
+            margin-right: 35px;
+            transition: all 0.3s;
+       
+            border-radius: 5px;
+            padding: 5px;
+            &:hover{
+                color:#ff6347;
+                border-left: #ff6347 3px solid;
+                padding-left: 5px;
+
+            }
+
+        }
+        nav h1{
+            margin-left: 20px;
+            cursor: default;
+        }
+        .header{
+            width: 100%;
+            position: relative;
+           display: flex;
+           justify-content: center;
+           flex-direction: column;
+           align-items: center;
+           height: 100vh;
+           background: url('./pic/ervo-rocks-Zam8TvEgN5o-unsplash.jpg')  no-repeat fixed ;
+           -webkit-background-size: cover;
+           -moz-background-size: cover;
+           -o-background-size: cover;
+
+color: #fff;
+
+           background-size: cover;
+           z-index: 1;
+        }
+        .header h2{
+            font-family:'Permanent Marker', cursive;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            letter-spacing: 5px;
+            font-weight: normal;
+            padding: 1.5rem;
+            border-top: 2px  #f8f2f2 solid;
+            border-bottom: 2px  #f8f2f2 solid;
+
+        } .game{
+       height: 800px;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;padding: 40px 60px;
+        }
+        .game .pic{
+            width: 60%;
+            height: 650px;
+            background-image: url('./pic/haidan-Zea2Q0UK3KQ-unsplash.jpg')  ;
+            background-position:center;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s;
+            &:hover{
+                transform: scale(1.1);
+            }
+           
+
+
+        }
+        .game .content{
+            text-align: center;
+            width: 35%;
+           
+            background: #000;color: #fff;
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;justify-content: center;
+            border-left: 3px solid #fff;
+        }
+
+        .team{
+            display: flex;
+            height: 400px;
+            padding: 50px 40px;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .team .img {
+          height: 100px;
+          background: url('./pic/team1.jpg') center center/cover;
+          border-radius: 50px;
+          border: #7fb636 2px solid;
+          transition: all 0.5s;
+          &:hover{
+            transform: scale(1.1);
+          }
+
+        }
+        .footer{
+            background-color: #000;
+            color: #fff;
+            width: 100%;
+            height: 60px;display: flex;justify-content:center;align-items:center;font-size:2;
+       
+            align-items: center;
+
+        }
+    
+        .galary{
+            width: 30%;
+            height: 300px;
+            display: flex;
+            gap: 10px;
+
+
+        }
+        img{
+            height:100%;
+            border-radius: 10px;
+            width: 20%;
+            object-fit: cover;
+            transition: all 1s ;
+            }
+            img:hover{
+              
+                width: 100%;
+            }
+    </style>
+</head>
+<body>
+    <nav class="#">
+        <h1>ABC</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <div class="header">
+
+   <h2>
+    Welcome to ABC!
+
+   </h2>
+   <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, inventore?</p>
+
+    </div>
+    <div class="game">
+        <div class="pic">
+            
+        </div>
+        <div class="content">
+            <h1>USER EXPERENCE</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, possimus. Eveniet quis unde illo nobis culpa quo cupiditate, animi voluptate officia quam molestias, voluptatibus, placeat sit pariatur ipsum cum architecto.</p>
+        </div>
+    </div>
+    <center><h1>gallery</h1></center>
+    <div class="galary">
+      
+        <img src="./pic/birgith-roosipuu-QRT7kipBGU8-unsplash.jpg" alt="" srcset="">
+        <img src="./pic/c-d-x-PDX_a_82obo-unsplash.jpg" alt="" srcset="">
+        <img src="./pic/haidan-Zea2Q0UK3KQ-unsplash.jpg" alt="" srcset="">
+        <img src="./pic/michael-oeser-GsEReKCpK6w-unsplash.jpg" alt="" srcset="">
+        <img src="./pic/yarenci-hdz-Tt_TIhVpYoM-unsplash.jpg" alt="" srcset="">
+        <img src="./pic/pic1.jpg" alt="" srcset="">
+        <img src="./pic/pic2.jpg" alt="" srcset="">
+        <img src="./pic/pic3.jpg" alt="" srcset="">
+        <img src="./pic/pic4.jpg" alt="" srcset="">
+        <img src="./pic/pic5.jpg" alt="" srcset="">
+         
+     </div>
+
+    
+    <center><h1>Our Team</h1></center>
+    <div class="team">
+        <div class="item">
+            <div class="img">
+               
+                
+        </div>
+        <h2>Max jaffer</h2>
+        <h5>Developer</h5>
+        
+    </div>
+        <div class="item">
+            <div class="img" style="background-image: url('./pic/team3.jpg');">
+               
+                
+        </div>
+        <h2>Riya jeen</h2>
+        <h5>Testing</h5>
+        
+    </div>
+        <div class="item">
+            <div class="img" style="background-image: url('./pic/team2.jpg');">
+               
+                
+        </div>
+        <h2>Gajendra </h2>
+        <h5>Manager</h5>
+        
+    </div>
+        
+    </div>
+    <div class="game">
+        <div class="content">
+            <h1>About US</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, possimus. Eveniet quis unde illo nobis culpa quo cupiditate, animi voluptate officia quam molestias, voluptatibus, placeat sit pariatur ipsum cum architecto.</p>
+        </div>
+        <div class="pic" style=" background-image: url('./pic/article.jpg')  ;">
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Created by Debabrata pattnayak</p>
+    </div>
+</body>
+</html>
