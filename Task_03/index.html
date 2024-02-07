@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        *{
+            margin: 0;padding: 0;
+            box-sizing: border-box;
+        }
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+
+        }
+        .nav{
+            text-align: center;
+            color: #fff;
+            background-color: #000;
+            padding: 15px 30px;
+
+        }
+        .container td{
+            width: 60px;
+            height: 60px;
+
+            
+        }
+        button{
+           width: 50px;
+           height: 50px;
+           border-radius: 25px;
+           cursor: pointer;
+           background: #000;font-size: larger;
+           color:#fff;
+           display: inline-block;
+            border: #64b118 2px solid;
+        }
+        table{
+            margin-top: 70px;
+            margin-bottom: 20px;
+            background: #000;
+            padding: 40px 50px;
+            border-radius: 40px;
+            }
+            .container{
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+            }
+            .green{
+                background: #47dd80 ;
+                border: #000 2px solid;
+                font-size: larger;
+
+            }
+            .display
+            {
+                text-align: center;
+                font-weight: bold;
+               padding-top: 50px;
+            }
+            .display input{
+                width: 450px;
+                height: 45px;
+                border: #64b118 2px solid;
+                border-radius: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: large;
+                padding: 5px 10px;
+                background: #000;
+                color: #fff;
+            }
+            .display input:active{
+                transform: scale(0.9);
+                
+            }
+            body{
+                background-color: #00DBDE;
+                background-image: linear-gradient(106deg, #00DBDE 0%, #FC00FF 100%);
+                animation: bgc 10s ease 50 infinite forwards alternate-reverse;
+            }
+            @keyframes bgc {
+                10%{
+                    background-color: #00DBDE;
+background-image: linear-gradient(122deg, #00DBDE 0%, #FC00FF 100%);
+
+                }
+                30%{
+                    background-color: #00DBDE;
+background-image: linear-gradient(180deg, #00DBDE 0%, #FC00FF 100%);
+
+                }
+                50%{
+                    background-color: #00DBDE;
+background-image: linear-gradient(244deg, #00DBDE 0%, #FC00FF 100%);
+
+                }
+                80%{
+                    background-color: #00DBDE;
+background-image: linear-gradient(315deg, #00DBDE 0%, #FC00FF 100%);
+
+                }
+                
+                95%{
+                    background-color: #00DBDE;
+background-image: linear-gradient(348deg, #00DBDE 0%, #FC00FF 100%);
+
+                }
+            }
+        </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>Calculator App </h1>
+    </div>
+    <div class="display">
+        <input type="text"  class="display"name="" id="display" disabled>
+    </div>
+    <div class="container">
+        <table>
+
+            <tr>
+                <td >
+                    <button onclick="clearAll()">C</button></td>
+                  <td>
+                    <button onclick="mathSymbol('%')" >%</button>
+                </td>
+                    <td>
+                    <button onclick="clearEntry()"><span class="material-symbols-outlined">
+                        cancel
+                        </span> </button></td>
+                        <td>
+                        <button class="div" onclick="mathSymbol('/')">/</button>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><button  class="num7"onclick="insert('7')">7</button></td>
+                        <td><button class="num8"onclick="insert('8')">8</button></td>
+                        <td><button class="num9"onclick="insert('9')">9</button></td>
+                        <td>
+                            <button class="mul" onclick="mathSymbol('*')">x</button>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td ><button class="num4"onclick="insert('4')">4</button></td>
+                        <td ><button class="num5" onclick="insert('5')">5</button></td>
+                        <td ><button class="num6"onclick="insert('6')">6</button></td>
+                        <td>
+                            <button calss="sub" onclick="mathSymbol('-')">-</button>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td ><button class="num1"onclick="insert('1')">1</button></td>
+                        <td ><button class="num2"onclick="insert('2')">2</button></td>
+                        <td ><button class="num3"onclick="insert('3')">3</button></td>
+                        <td>
+                            <button calss="add" onclick="mathSymbol('+')" >+</button>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td ><button onclick="insert('00')">00</button></td>
+                        <td ><button onclick="insert('0')">0</button></td>
+                        <td>
+                            <button onclick="decimalPoint()">.</button>
+                            </td>
+                        <td colspan="">
+                            <button onclick="calculate()" class="green">=</button>
+                            </td>
+                            
+                                </tr>
+
+                           
+
+                    
+           
+        </table>
+        
+        </div>
+        <script >// Clear all entries
+            const num1 =document.getElementsByClassName("num1");
+            const num2 =document.getElementsByClassName("num2");
+            const num3 =document.getElementsByClassName("num3");
+            const num4 =document.getElementsByClassName("num4");
+            const num5 =document.getElementsByClassName("num5");
+            const num6 =document.getElementsByClassName("num6");
+            const num7 =document.getElementsByClassName("num7");
+            const Add =document.getElementsByClassName("add");
+            const num8 =document.getElementsByClassName("num8");
+            const sub =document.getElementsByClassName("sub");
+            const div=document.getElementsByClassName("div");
+            const mul=document.getElementsByClassName("mul");
+            const display = document.getElementById("display");
+            const num9 =document.getElementsByClassName("num9");
+            Add.addEventListener("click",()=>{
+                display.value+='+';
+            
+            })
+            document.addEventListener("keypress", function(event) {
+            
+               if(event.key==='1'||event.key==='2'||event.key==='3'||event.key==='4'||
+               event.key==='5'||event.key==='6'||event.key==='7'||event.key==='8'||
+               event.key==='9'||event.key==='0'||event.key==='.'||event.key==='+'||
+               event.key==='-'||event.key==='*'||event.key==='/'||event.key==='%'){
+                display.value += event.key;
+               }
+              
+              });
+            
+            function clearAll() {
+                document.getElementById("display").value = "";
+            }
+            alert("EHkllo");
+            // Handle mathematical symbols
+            function mathSymbol(symbol) {
+                const display = document.getElementById("display");
+                display.value += symbol;
+            }
+            
+            // Clear the last entry
+            function clearEntry() {
+                const display = document.getElementById("display");
+                display.value = display.value.slice(0, -1);
+            }
+            
+            // Insert a number or digit
+            
+            function insert(value) {
+                document.getElementById("display").value += value;
+            }
+            
+            // Handle decimal point
+            function decimalPoint() {
+                const display = document.getElementById("display");
+                // Check if the display already contains a decimal point
+                
+                    display.value += ".";
+                
+            }
+            
+            // Calculate the result
+            function calculate() {
+                const display = document.getElementById("display");
+                // Use eval to calculate the result from the display value
+                display.value = eval(display.value);
+            }
+            
+            </script>
+</body>
+</html>
